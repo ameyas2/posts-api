@@ -15,7 +15,6 @@ import java.util.UUID;
 public class CommentDTO {
     private UUID id;
     private String description;
-    private UserDTO userDTO;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
     private PostDTO postDTO;

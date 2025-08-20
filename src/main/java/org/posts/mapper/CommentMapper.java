@@ -10,11 +10,9 @@ import org.posts.model.Post;
 
 @Mapper(componentModel = "spring")
 public interface CommentMapper {
-    @Mapping(target = "userDTO", ignore = true)
     @Mapping(target = "postDTO", ignore = true)
     CommentDTO toCommentDto(Comment comment);
 
-    @Mapping(target = "user", ignore = true)
     @Mapping(target = "post", ignore = true)
     Comment toComment(CommentDTO commentDTO);
 }

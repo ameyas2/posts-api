@@ -24,18 +24,13 @@ public class Comment extends AbstractEntity {
     private String description;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private User user;
-
-    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "post_id")
     private Post post;
 
-    public static Comment of(String description, Post post, User user) {
+    public static Comment of(String description, Post post) {
         return Comment.builder()
                 .description(description)
                 .post(post)
-                .user(user)
                 .build();
     }
 }
